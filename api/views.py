@@ -77,16 +77,8 @@ class FollowViewSet(viewsets.ModelViewSet):
     search_fields = ['=following__username', '=user__username', ]
 
     def perform_create(self, serializer):
-
-        # Проверяем валидность данных
-        if 'following' not in self.request.POST:
-            raise serializers.ValidationError('Validation Error!', code=400)
-        username = self.request.data.get('following')
-        following = User.objects.get(username=username)
-
-        # Проверяем наличие подписки у Юзера
-        value = Follow.objects.filter(user=self.request.user, following=following).exists()
-        if self.request.user != following and value is not True:
-            serializer.save(user=self.request.user, following=following)
-        else:
-            raise serializers.ValidationError('Validation Error!', code=400)
+        following = get_object_or_404(
+                                        User,
+                                        username=serializer.validated_data["following"]
+                                        )
+        serializer.save(following=following, user=self.request.user)
