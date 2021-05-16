@@ -1,4 +1,9 @@
-# API для MyTube
+<p align="center">
+  <img width="318" height="114" src="https://user-images.githubusercontent.com/68146917/118392482-a529aa00-b642-11eb-95fc-35b9a5373174.png">
+</p>
+
+
+# API для базы данных MyTube
 API для социальной сети MyTube.
 
 На сайте можно создать темотические группы по интересам.
@@ -14,8 +19,8 @@ POST запрос URL api/v1/token/
 
 Обязательные поля:
 
-- username
-- password
+![](https://user-images.githubusercontent.com/68146917/118391933-79f18b80-b63f-11eb-870f-3fe02f7e1fd6.png)
+
 
 ## Работа с постами.
 
@@ -23,7 +28,7 @@ POST запрос URL api/v1/token/
 
 POST запрос URL api/v1/posts/
 
-Обязательное поле "text"
+Обязательное поле
 
 ![](https://user-images.githubusercontent.com/68146917/118391704-62fe6980-b63e-11eb-91de-aa108d00b97c.png)
 
@@ -51,7 +56,7 @@ DELETE запрос на URL api/v1/posts/id_post
 
 POST запрос на URL api/v1/group/
 
-Обязательное поле "title"
+Обязательное поле
 
 ![](https://user-images.githubusercontent.com/68146917/118391783-c7b9c400-b63e-11eb-9967-28a9905ac1a7.png)
 
@@ -66,7 +71,9 @@ GET запрос на URL api/v1/group/
 
 POST запрос на URL api/v1/posts/id_post/comments/
 
-Обязательное поле "text"
+Обязательное поле
+
+![](https://user-images.githubusercontent.com/68146917/118391783-c7b9c400-b63e-11eb-9967-28a9905ac1a7.png)
 
 Просмотреть все комментарии к посту:
 
@@ -141,6 +148,8 @@ https://www.microsoft.com/ru-ru/p/python-37/9nj46sx7x90p?rtc=1&activetab=pivot:o
 Потребуется установка нужных пакетов, используйте:
 
 `python -m pip install -r requirements.txt`
+
+В репозитарии создайде файл .env. Запишите в файл SECRET_KEY = 'Придумайте свой ключ'
 
 Запустите проект используя команду:
 
