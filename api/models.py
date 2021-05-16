@@ -5,12 +5,10 @@ User = get_user_model()
 
 
 class Group(models.Model):
-    objects = models.Manager()
     title = models.CharField(max_length=200)
 
 
 class Post(models.Model):
-    objects = models.Manager()
     text = models.TextField()
     pub_date = models.DateTimeField(
         "Дата публикации",
@@ -34,7 +32,6 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    objects = models.Manager()
     author = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
@@ -54,7 +51,6 @@ class Comment(models.Model):
 
 
 class Follow(models.Model):
-    objects = models.Manager()
     following = models.ForeignKey(
         User, on_delete=models.CASCADE,
         related_name='following'
