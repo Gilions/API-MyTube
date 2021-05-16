@@ -123,7 +123,6 @@ DELETE запрос на URL api/v1/posts/id_post
 - Python 3
 - Django
 - REST API Framework
-- NGINX + Gunicorn
 
 #  Установка
 ______
