@@ -4,6 +4,15 @@
 
 
 # API для базы данных MyTube
+
+[![Python](https://img.shields.io/badge/-Python-464646?style=flat-square&logo=Python)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/-Django-464646?style=flat-square&logo=Django)](https://www.djangoproject.com/)
+[![Django REST Framework](https://img.shields.io/badge/-Django%20REST%20Framework-464646?style=flat-square&logo=Django%20REST%20Framework)](https://www.django-rest-framework.org/)
+
+
+
+
+
 API для социальной сети MyTube.
 
 На сайте можно создать темотические группы по интересам.
@@ -15,7 +24,7 @@ API для социальной сети MyTube.
 # Работа с API
 ## Получение JWT-токена:
 
-POST запрос URL api/v1/token/
+**POST** запрос URL api/v1/token/
 
 Обязательные поля:
 
@@ -24,9 +33,9 @@ POST запрос URL api/v1/token/
 
 ## Работа с постами.
 
-Публикация поста:
+**Публикация поста:**
 
-POST запрос URL api/v1/posts/
+**POST** запрос URL api/v1/posts/
 
 Обязательное поле
 
@@ -54,40 +63,40 @@ DELETE запрос на URL api/v1/posts/id_post
 
 Создание группы:
 
-POST запрос на URL api/v1/group/
+**POST** запрос на URL api/v1/group/
 
 Обязательное поле
 
 ![](https://user-images.githubusercontent.com/68146917/118391783-c7b9c400-b63e-11eb-9967-28a9905ac1a7.png)
 
 
-Получить список созданных групп:
+**Получить список созданных групп:**
 
-GET запрос на URL api/v1/group/
+**GET** запрос на URL api/v1/group/
 
 ## Комметарии
 
 Добавить комментарий к посту:
 
-POST запрос на URL api/v1/posts/id_post/comments/
+**POST** запрос на URL api/v1/posts/id_post/comments/
 
 Обязательное поле
 
 ![](https://user-images.githubusercontent.com/68146917/118391783-c7b9c400-b63e-11eb-9967-28a9905ac1a7.png)
 
-Просмотреть все комментарии к посту:
+**Просмотреть все комментарии к посту:**
 
-GET запрос на URL api/v1/posts/id_post/comments/
+**GET** запрос на URL api/v1/posts/id_post/comments/
 
 Посмотреть конкретный комментарий:
 
-POST запрос на URL api/v1/posts/id_post/comments/comment_id/
+**POST** запрос на URL api/v1/posts/id_post/comments/comment_id/
 
 Сайт поддерживает возможность изменять существующие комментарии:
 
-PUT/PATCH - запрос на URL api/v1/posts/id_post/comments/
+**PUT/PATCH** - запрос на URL api/v1/posts/id_post/comments/
 
-DELETE запрос на URL api/v1/posts/id_post/comments/comment_id/ - удалит комментарий
+**DELETE** запрос на URL api/v1/posts/id_post/comments/comment_id/ - удалит комментарий
 
 Удаление либо изменение комментариев доступно только автору либо администратору сайта.
 
@@ -95,13 +104,13 @@ DELETE запрос на URL api/v1/posts/id_post/comments/comment_id/ - уда�
 
 Получиит список всех подпищиков:
 
-GET запрос на URL /api/v1/follow/
+**GET** запрос на URL /api/v1/follow/
 
 ![](https://user-images.githubusercontent.com/68146917/118391497-401f8580-b63d-11eb-8440-c3f829fe46ac.png)
 
-Создание подписки:
+**Создание подписки:**
 
-POST запрос на URL /api/v1/follow/
+**POST** запрос на URL /api/v1/follow/
 
 В параметр "following" передать автора
 
@@ -128,9 +137,9 @@ ______
 
 `sudo apt update`
 
-Для установки Python на Windows пройдите по ссылке
+[Python for Windows](https://www.microsoft.com/ru-ru/p/python-37/9nj46sx7x90p?rtc=1&activetab=pivot:overviewtab)
 
-https://www.microsoft.com/ru-ru/p/python-37/9nj46sx7x90p?rtc=1&activetab=pivot:overviewtab
+
 
 `sudo apt install python3-pip python3-venv git -y`
 
