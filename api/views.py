@@ -1,10 +1,10 @@
 from django.shortcuts import get_object_or_404
+from rest_framework import filters, permissions, viewsets
 
-from rest_framework import viewsets, permissions, filters
-
-from .serializers import *
-from .models import Post, Follow, Group, User
+from .models import Follow, Group, Post, User
 from .permissions import IsAuthorOrReadOnlyPermission
+from .serializers import (CommentSerializer, FollowSerializer, GroupSerializer,
+                          PostSerializer)
 
 
 class PostViewSet(viewsets.ModelViewSet):
@@ -78,7 +78,7 @@ class FollowViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         following = get_object_or_404(
-                                        User,
-                                        username=serializer.validated_data["following"]
-                                        )
+            User,
+            username=serializer.validated_data["following"]
+            )
         serializer.save(following=following, user=self.request.user)

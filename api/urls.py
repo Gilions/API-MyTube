@@ -1,12 +1,9 @@
-from django.urls import path, include
+from django.urls import include, path
 from rest_framework.routers import DefaultRouter
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
-    TokenRefreshView,
-)
+from rest_framework_simplejwt.views import (TokenObtainPairView,
+                                            TokenRefreshView)
 
-from .views import PostViewSet, CommentViewSet, GroupViewSet, FollowViewSet
-
+from .views import CommentViewSet, FollowViewSet, GroupViewSet, PostViewSet
 
 post_router = DefaultRouter()
 comment_router = DefaultRouter()
