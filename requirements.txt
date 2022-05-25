@@ -17,7 +17,7 @@ pluggy==0.13.1
 py==1.10.0
 pycodestyle==2.7.0
 pyflakes==2.3.1
-PyJWT==2.1.0
+PyJWT==2.4.0
 pyparsing==2.4.7
 pytest==6.2.4
 pytest-django==4.3.0
